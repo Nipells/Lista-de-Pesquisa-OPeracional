@@ -1,0 +1,5 @@
+bin_packing
+*.o
+.vscode/
+
+//para não subir arquivos pesados do CPLEX para a internet
