@@ -1,0 +1,46 @@
+pesquisa operacional
+
+exato -----------------------------------------------
+
+questao 2: modelos de programaçao linear inteira
+
+bin packing
+
+uma pessoa trabalha em um centro de distribuiçao, onde ha varios itens que çrecisam ser alocados em caixas, mas queremos utilizar o menor numero de caixas (recipientes/bins) possiveis para tal.
+
+no enunciado do pdf cada caixa tem capacidade maxima de valor igual a 1
+
+objetivo: organizar os itens de forma a usar o menor numero de itens possiveis.
+
+modelagem matematica:
+
+o cplex entende equaçoes lineares, entao e iso que usaremos, pra o bin packing classico usamos de dois conjuntos de variaveis de decisao (que valem 0 ou 1), onde:
+
+y_j vale 1 se a caixa j for utilizada e 0 caso contrario
+x_ij vale 1 se o item i for colocado dentro da caixa j, e 0 caso contrario
+
+modelo matematico:
+
+minimizar o total de caixas usadas, ou seja, o somatorio de y_j
+
+restriçao 1: garantia de empacotamento - todo item i deve ser colocado extamemte em 1 caixa
+
+restriçao 2: a soma dos tamanhos dos itens colocados na caixa j nao podem estourar a capacidade maxima, de 1 nesse caso, e o item so pode entrar ali se a caixa estiver aberta, ou seja, y_j = 1
+
+arquivo no vs code e git hub
+
+heuristica -------------------------------
+
+entendendo a Estrutura Base em C++
+
+Antes de escrever código CPLEX (que você não vai usar aqui), pense em como representar isso em C++ puro:
+
+    Um item: Pode ser apenas um int (o ID dele) e o seu peso (double).
+
+    Uma caixa (Bin): É uma estrutura que tem uma capacidade restante e uma lista de itens dentro dela.
+
+    Uma Solução: É um conjunto (vetor) de caixas.
+    
+    a ideia era usar o first-fit, mas o first-fit decreasing consegue resultados melhores, pois aloca primeiro as coisas grandes e vai encaixando as pequeninas nos espaços que sobram.
+    
+    usando a biblioteca de algoritmo que ordena os itens de forma decrescente antes de rodas os laços das caixas. como o vetir original guarda apenas os tamanhos, se ordenar direto perde-se o id originl do item, para resolver isso criasse um vetor de "pares" que guarda o id e o tamanho juntos
