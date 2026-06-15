@@ -1,5 +1,11 @@
-bin_packing
-*.o
-.vscode/
+#bin_packing
+#*.o
+#.vscode/
 
-//para não subir arquivos pesados do CPLEX para a internet
+#para não subir arquivos pesados do CPLEX para a internet
+
+# ignorar executaveis e binarios do linux
+*_exato
+*_heuristica
+*.o
+*.out

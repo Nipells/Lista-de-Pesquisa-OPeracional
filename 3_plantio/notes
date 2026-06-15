@@ -1,0 +1,34 @@
+dados:
+
+Capacidade das Fazendas (Hectares disponíveis):
+
+    Fazenda 1: 400 hectares
+
+    Fazenda 2: 600 hectares
+
+    Fazenda 3: 450 hectares
+
+
+Lucro Líquido por Hectare de cada Cultura:
+
+    Milho: R$ 500 por hectare
+
+    Soja: R$ 700 por hectare
+
+    Arroz: R$ 400 por hectare
+    
+
+Consumo de Água (Litros por hectare) e Disponibilidade:
+
+    Milho gasta 3L/ha | Soja gasta 4L/ha | Arroz gasta 5L/ha
+
+    Limite de água total disponível na região: 5000 Litros
+    
+
+Cotas Máximas de Vendas (Demanda do mercado):
+
+    No máximo 600 hectares totais de Milho.
+
+    No máximo 500 hectares totais de Soja.
+
+    No máximo 325 hectares totais de Arroz.

@@ -1,0 +1,26 @@
+clique maxima
+
+v1 => v2 e v3
+v2 => v1 e v3
+v3 => v1 e v2
+
+como todos se conectam forma um vertice de clique 3
+
+variaveis de decisao:
+
+xv = 1 se o vertice entra na clique maxima 
+   = 0 se ele fica de fora
+   
+   rtestricoes
+   
+   se dois vertices nao possuem uma aresta ligando eles, eles nao podem estar juntos na clique ao memso tempo
+   
+   
+x1 + x4 <= (Vértice 1 e 4 não têm linha entre eles)
+x1 + x5 <= 1 (Vértice 1 e 5 não têm linha entre eles)
+x2 + x5 <= 1 (Vértice 2 e 5 não têm linha entre eles)
+x3 + x4 <= 1 (Vértice 3 e 4 não têm linha entre eles)
+
+fo
+
+max o numero de veretives escohidos pela clique

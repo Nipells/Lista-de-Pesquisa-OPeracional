@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include",
+                "/opt/ibm/ILOG/CPLEX_Studio2211/concert/include"
+            ],
+            "defines": [
+                "IL_STD"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
